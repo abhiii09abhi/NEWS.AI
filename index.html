@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Country Stability Predictor</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f8f9fa; }
+    h1 { color: #333; }
+    .card {
+      background: white; padding: 15px; margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-radius: 10px;
+    }
+    .risk { color: red; font-weight: bold; }
+    .safe { color: green; font-weight: bold; }
+    button {
+      padding: 10px 20px; background: #007bff; color: white;
+      border: none; border-radius: 5px; cursor: pointer;
+    }
+    #loading {
+      display: none;
+      margin-top: 20px;
+      font-style: italic;
+      color: #666;
+    }
+    .error {
+      color: red;
+      background: #ffeeee;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌍 Country Stability Predictor</h1>
+  <p>Enter a country code to analyze latest news and predict geopolitical stability.</p>
+
+  <div>
+    <input type="text" id="country" placeholder="Enter country code (e.g., in, us)" />
+    <button onclick="getStability()">Check Stability</button>
+  </div>
+
+  <div id="loading">Loading news and analyzing stability... Please wait.</div>
+  <div id="error"></div>
+  <div id="results"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
